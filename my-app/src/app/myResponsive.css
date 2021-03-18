@@ -1,0 +1,226 @@
+@media only screen and (max-width:760px){
+ .navs{
+  height:5vh;
+ }
+ .hamburger{
+  width:4px;
+  margin-right:7%;
+ }
+ .line{
+  height:2px;
+ }
+ .grandParent{
+  height:90vh;
+ }
+ .parent{
+  height:90vh;
+ }
+ .child{
+  height:90vh;
+  display:grid;
+  grid-template-rows:1fr 5fr 5fr;
+  grid-template-columns:1fr;
+ }
+ .block1{
+  grid-row-start:1;
+  grid-row-end:2;
+  grid-column-start:1;
+  grid-column-end:2;
+ }
+ .block2{
+  grid-row-start:2;
+  grid-row-end:3;
+  grid-column-start:1;
+  grid-column-end:2;
+ }
+ .block3{
+  grid-row-start:3;
+  grid-row-end:4;
+  grid-column-start:1;
+  grid-column-end:2;
+ }
+ .myCardText{
+  font-size:100%;
+ }
+ .myBack{
+  height:40vh;
+  border-radius:22%;
+ }
+ .brainLeftText{
+  font-size:90%;
+ }
+ .brainRightText{
+  font-size:90%;;
+ }
+ .myDescription{
+  font-size:70%;
+ }
+ .chatGrid{
+  padding:10px 20px;
+  border-radius:50px;
+  display:flex;
+  justify-content:center;
+  background-size:120%;
+  align-items:center;
+ }
+ .myChatText{
+
+  font-size:70%;
+ }
+ .myInp{
+  padding:5px 10px;
+  border-radius:40px;
+  font-size:50%;
+  font-family:'Open Sans',sans serif;
+ }
+
+ .referenceButton{
+  display:none;
+ }
+ .newReference{
+  display:block;
+  background:none;
+  border:1px solid black;
+  padding:10px 15px;
+  border-radius:35px;
+  outline:none;;
+  font-family:'Open Sans',sans serif;
+ }
+ .myGrid{
+ }
+ .seg0{
+  border:1px solid black;
+  position:relative;
+ }
+ .seg2{
+  border:1px solid black;
+  border-radius:30px;
+  transform:translateY(-40px);
+ }
+ .seg4{
+  border:1px solid black;
+  transform:scale(1.3);
+ }
+ .seg3{
+  border:1px solid black;
+  border-radius:30px;
+ }
+ .seg6{
+  border:1px solid grey;
+  transform:scale(1.4);
+  z-index:6;
+ }
+ .seg10{
+  border:1px solid grey;
+  border-radius:100px;
+  transform:scale(2);
+ }
+ .seg11{
+  border:1px solid black;
+  transform:rotate(30deg);
+  opacity:0.7;
+  border-radius:10px;
+ }
+ .seg13{
+  transform:scale(2.6) rotate(-20deg);
+  z-index:-999;
+ }
+ .seg8{
+  border:1px solid black;
+  border-radius:20px;
+  opacity:0.8;
+ }
+ .myFont{
+  color:transparent;
+  font-size:3px;
+ }
+ .customFooter{
+  height:100vh;
+  margin-top:30vh;
+background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+
+
+
+ }
+ .footer-top{
+  font-size:100%;
+ }
+ .footer-note{
+  font-size:100%;
+ }
+ .footerIcon{
+  width:40px;
+  opacity:0.7;
+ }
+ .git1{
+  width:40px;
+  height:40px;
+  opacity:0.1;
+ }
+ .git2{
+  width:40px;
+  height:10px;
+ }
+ .git3{
+  width:40px;
+  height:33px;
+ }
+ .myJumbotron{
+  height:50vh;
+ }
+ .selectCard{
+ }
+ .optionsCard{
+  border-radius:20px;
+ }
+ .absoluteImage{
+  width:15px;
+ }
+ .noImage{
+ }
+ .middlePara{
+  font-size:60%;
+ }
+ .catBodyText{
+  font-size:75%;
+ }
+ .catButton{
+  padding:2px 4px;
+ }
+ .catClock{
+  width:20px;
+ }
+ .catText{
+  font-size:75%;
+ }
+ .eyes{
+  position:absolute;
+  top:1%;
+  right:3%;
+ }
+ .blackIn{
+  position:absolute;
+  left:40%;
+  top:30%;
+ }
+ .allow{
+  top:10%;
+ }
+ .letOut{
+  top:10%;
+  left:60%;
+ }
+ .firstT{
+  top:2%;
+  left:2%;
+ }
+ .secondT{
+  top:83%;
+  left:2%;
+ }
+ .ambience{
+  top:5%;
+  color:black;
+ }
+}
+
