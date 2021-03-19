@@ -16,6 +16,7 @@
  height:250px;
  width:100%;
  display:grid;
+ border-top:1px solid #e6dfdf;
  grid-template-rows:1fr 1fr;
  grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -78,6 +79,7 @@
  height:260px;
  width:100%;
  display:grid;
+ border-bottom:1px solid #e6dfdf;
  grid-template-rows:1fr 1fr;
  grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
 }

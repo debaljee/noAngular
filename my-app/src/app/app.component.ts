@@ -41,7 +41,7 @@ import { FormsModule } from '@angular/forms';
      style({opacity:0,
             height:'0%',
             'font-size':'0%'}),
-     animate(2000)
+     animate(1000)
     ]),
    ]),
    trigger('caro',[
@@ -62,57 +62,70 @@ import { FormsModule } from '@angular/forms';
    trigger('ca',[
     state('initial',
      style({width:'20vw',
+            transform:'rotateY(0deg)',
             height:'50vh'})),
     state('inferior',
      style({width:'15vw',
+            transform:'rotateY(0deg)',
             height:'37vh'})),
     state('superior',
      style({width:'35vw',
+            transform:'rotateY(180deg)',
             height:'87vh'})),
      transition('*=>*',[
-      animate(2000)
+      animate(1500)
      ])
    ]),
    trigger('cb',[
     state('initial',
      style({width:'20vw',
+            transform:'rotateY(0deg)',
             height:'50vh'})),
     state('inferior',
      style({width:'15vw',
+            transform:'rotateY(0deg)',
             height:'37vh'})),
     state('superior',
      style({width:'35vw',
+            transform:'rotateY(180deg)',
             height:'87vh'})),
     transition('*=>*',[
-     animate(2000)
+     animate(1500)
     ])
    ]),
    trigger('cc',[
     state('initial',
      style({width:'20vw',
+            transform:'rotateY(0deg)',
             height:'50vh'})),
-    state('inferior',
-     style({width:'15vw',
+    state('inferior',               
+     style({width:'15vw',       
+            transform:'rotateY(0deg)',
             height:'37vh'})),
     state('superior',
      style({width:'35vw',
+            transform:'rotateY(180deg)',
             height:'87vh'})),
     transition('*=>*',[
-     animate(2000)
+     animate(1500)
     ])
    ]),
    trigger('cd',[
     state('initial',
      style({width:'20vw',
+            transform:'rotateY(0deg)',
             height:'50vh'})),
     state('inferior',
      style({width:'15vw',
+            transform:'rotateY(0deg)',
             height:'37vh'})),
     state('superior',
      style({width:'35vw',
+            transform:'rotateY(180deg)',
+                
             height:'87vh'})),
     transition('*=>*',[
-     animate(2000)
+     animate(1500)
     ])
    ]),
    trigger('fluidInput',[
@@ -124,21 +137,22 @@ import { FormsModule } from '@angular/forms';
     state('contracted',
      style({width:'40vw'})),
     transition('*=>*',[
-     animate(2000)
+     animate(1000)
     ])
    ]),
+
    trigger('brainPosition',[
     state('tiltedRight',
-     style({width:'90%',
+     style({width:'73%',
             transform:'rotate(30deg)'})),
     state('tiltedLeft',
-     style({width:'90%',
+     style({width:'73%',
             transform:'rotate(-30deg)'})),
     state('tiltedCenter',
      style({width:'70%',
             transform:'rotate(0deg)'})),
     transition('*=>*',[
-     animate(1000)
+     animate(500)
     ])
    ]),
    trigger('lungsGrow',[
@@ -311,6 +325,8 @@ export class AppComponent {
   toggleBut3:number=0;
   toggleBut4:number=0;
   count:number=0;
+  oneTimer:number=0;
+  twoTimer:number=0;
   myConfirm:number=0;
     constructor(){
     this.xCo=this.xCo.concat(this.pix);
@@ -642,6 +658,10 @@ export class AppComponent {
    this.secondCardState='inferior';
    this.thirdCardState='inferior';
    this.fourthCardState='inferior';
+    this.toggleBut1=0;
+    this.toggleBut2=0;
+    this.toggleBut3=0;
+    this.toggleBut4=0;
    setTimeout(()=>{
     this.toggleBut1=1;
    },50);
@@ -651,6 +671,10 @@ export class AppComponent {
    this.secondCardState='superior';
    this.thirdCardState='inferior';
    this.fourthCardState='inferior';
+    this.toggleBut1=0;
+    this.toggleBut2=0;
+    this.toggleBut3=0;
+    this.toggleBut4=0;
    setTimeout(()=>{
     this.toggleBut2=1;
    },50);
@@ -660,6 +684,10 @@ export class AppComponent {
    this.secondCardState='inferior';
    this.thirdCardState='superior';
    this.fourthCardState='inferior';
+    this.toggleBut1=0;
+    this.toggleBut2=0;
+    this.toggleBut3=0;
+    this.toggleBut4=0;
    setTimeout(()=>{
     this.toggleBut3=1;
    },50);
@@ -669,6 +697,10 @@ export class AppComponent {
    this.secondCardState='inferior';
    this.thirdCardState='inferior';
    this.fourthCardState='superior';
+    this.toggleBut1=0;
+    this.toggleBut2=0;
+    this.toggleBut3=0;
+    this.toggleBut4=0;
    setTimeout(()=>{
     this.toggleBut4=1;
    },50);
@@ -700,5 +732,17 @@ export class AppComponent {
    this.textState=0;
    this.caroValue=-6;
    this.caroState='pic1';
+  }
+  timer1(){
+   this.oneTimer=5;
+   this.twoTimer=3;
+  }
+  timer2(){
+   this.oneTimer=20;
+   this.twoTimer=10;
+  }
+  timer3(){
+   this.oneTimer=50;
+   this.twoTimer=10;
   }
 }

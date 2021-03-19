@@ -87,6 +87,7 @@
   font-family:'Open Sans',sans serif;
  }
  .myGrid{
+  border-top:1px solid white;
  }
  .seg0{
   border:1px solid black;
@@ -221,6 +222,9 @@ background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
  .ambience{
   top:5%;
   color:black;
+ }
+ .benefitTitle{
+  font-size:90%;
  }
 }
 

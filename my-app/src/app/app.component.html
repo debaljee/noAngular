@@ -305,8 +305,7 @@
       Exhale 00:0{{exhaleSeconds}}
      </li>
     </ul>
-    <p style="font-family:'Open Sans',sans serif;
-              font-size:200%"
+    <p 
        class="myDescription">
      The exercise helps regulate the hormone cortisol, which controls your fight or flight response. This is important because too much cortisol being released in your body too often can have negative long-term health effects.
     </p>
@@ -364,7 +363,8 @@
    redundant and necessary. Share both every once in a while.
   </p>
  </div>
- <div class="row mx-0 chatArea">
+ <div class="row mx-0 chatArea"
+      *ngIf="appState==1">
   <div class="col-sm-12 px-0">
    <div class="row mx-0"
         *ngFor="let x of happyThoughts"
@@ -478,13 +478,19 @@
    </button>
   </div>
  </div>
-
-
-
+<br *ngIf="appState==1">
+<br *ngIf="appState==1">
+<br *ngIf="appState==1">
+<hr style="width:80%;
+           margin-left:10%"
+    *ngIf="appState==1">
  <div class="container text-center"
       *ngIf="appState==1">
-  <h1 style="font-family:'Open Sans',sans serif">
-   Benefits Of Meditation
+
+  <h1 style="font-family:'Open Sans',sans serif"
+      class="benefitTitle">
+   Benefits Of Meditation<br><br>click on the images to toggle
+    
   </h1>
  </div>
 
@@ -819,9 +825,7 @@
  <div class="myJumbotron"
       *ngIf="appState==2">
   <div class="selectCard"
-       [@ca]="firstCardState"
-       (mouseleave)="normalCardState()"
-                  
+       [@ca]="firstCardState"                  
        (mouseenter)="firstCardExpand()">
    <div class="optionsCard front">
     <div class="categories">
@@ -848,6 +852,7 @@
        for<br>
        beginners<br>
        <button type="button"
+               (mouseenter)="timer1()"
                (click)="toggleState3()"
                class="catButton">
         Select
@@ -887,8 +892,7 @@
    </div>
   </div>
   <div class="selectCard"
-       (mouseenter)="secondCardExpand()"
-       (mouseleave)="normalCardState()"
+       (mouseenter)="secondCardExpand()"     
        [@cb]="secondCardState">
    <div class="optionsCard front">
 
@@ -918,6 +922,7 @@
        for<br>
        Intermediate Users<br>
        <button type="button"
+               (mouseenter)="timer2()"
                (click)="toggleState3()"
                class="catButton">
         Select
@@ -957,7 +962,6 @@
   </div>
   <div class="selectCard"
        (mouseenter)="thirdCardExpand()"
-       (mouseleave)="normalCardState()"
        [@cc]="thirdCardState">
    <div class="optionsCard front">
     <div class="categories">
@@ -984,6 +988,7 @@
        for<br>
        Advanced Users<br>
        <button type="button"
+               (mouseenter)="timer3()"
                (click)="toggleState3()"
                class="catButton">
         Select
@@ -1020,7 +1025,6 @@
   </div>
   <div class="selectCard"
        (mouseenter)="fourthCardExpand()"
-       (mouseleave)="normalCardState()"
        [@cd]="fourthCardState">
    <div class="optionsCard front">
     <div class="categories">
@@ -1142,7 +1146,7 @@
         class="firstT"
         @textIns            
         *ngIf="caroValue>=16 && caroValue<19">
-  The first timer<br>ends after 25:00
+  The first timer<br>ends after {{oneTimer}}:00
     </h1>
 
 
@@ -1153,7 +1157,7 @@
         @textIns
  
         *ngIf="caroValue>=17 && caroValue<19">
-       The second<br>after 5:00
+       The second<br>after {{twoTimer}}:00
                  
     </h1>
 
@@ -1225,7 +1229,6 @@
                                           
  <li (click)="toggleState1()"
 
-     class="list-group-item myLink">Collapse</li>
-     
+     class="list-group-item myLink">Github</li>     
 </ul>
 
